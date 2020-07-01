@@ -111,12 +111,30 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../articles/bio3d_vignettes.html">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-book"></span>
      
     Tutorials
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">ADVANCED TUTORIALS</li>
+    <li>
+      <a href="../articles/b11.html">Title B1</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">WEBAPP TUTORIALS</li>
+    <li>
+      <a href="../articles/c11.html">Title C1</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../reference/index.html">
@@ -253,7 +271,7 @@
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'>##-- PDB torsion analysis</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"1bg2"</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpVENcGx/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>tor</span> <span class='op'>&lt;-</span> <span class='fu'>torsion.pdb</span>(<span class='kw'>pdb</span>)
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"1bg2"</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>tor</span> <span class='op'>&lt;-</span> <span class='fu'>torsion.pdb</span>(<span class='kw'>pdb</span>)
 <span class='co'>## basic Ramachandran plot</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='kw'>tor</span><span class='op'>$</span><span class='kw'>phi</span>, <span class='kw'>tor</span><span class='op'>$</span><span class='kw'>psi</span>)</div><div class='img'><img src='torsion.xyz-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## torsion analysis of a single coordinate vector </span>

@@ -109,12 +109,30 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../articles/bio3d_vignettes.html">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-book"></span>
      
     Tutorials
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">ADVANCED TUTORIALS</li>
+    <li>
+      <a href="../articles/b11.html">Title B1</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">WEBAPP TUTORIALS</li>
+    <li>
+      <a href="../articles/c11.html">Title C1</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../reference/index.html">
@@ -242,8 +260,8 @@
 <span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples/1hel.pdb"</span>, package=<span class='st'>"bio3d"</span>) )
 
 <span class='co'>## Calculate (vibrational) normal modes</span>
-<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.015 seconds.
-#&gt;  Diagonalizing Hessian...	Done in 0.102 seconds.</div><div class='input'>
+<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.013 seconds.
+#&gt;  Diagonalizing Hessian...	Done in 0.078 seconds.</div><div class='input'>
 <span class='co'>## Calculate deformation energies</span>
 <span class='kw'>def.energies</span> <span class='op'>&lt;-</span> <span class='fu'>deformation.nma</span>(<span class='kw'>modes</span>)
 <span class='co'># }</span>

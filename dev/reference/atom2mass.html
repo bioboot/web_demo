@@ -109,12 +109,30 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../articles/bio3d_vignettes.html">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-book"></span>
      
     Tutorials
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">ADVANCED TUTORIALS</li>
+    <li>
+      <a href="../articles/b11.html">Title B1</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">WEBAPP TUTORIALS</li>
+    <li>
+      <a href="../articles/c11.html">Title C1</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../reference/index.html">
@@ -262,7 +280,7 @@
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'>## Get atomic symbols from a PDB object with a customized data set</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"3RE0"</span>, verbose=<span class='fl'>FALSE</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpVENcGx/3RE0.pdb  exists. Skipping download</span></div><div class='output co'>#&gt;    PDB has ALT records, taking A only, rm.alt=TRUE</div><div class='input'><span class='kw'>inds</span> <span class='op'>&lt;-</span> <span class='fu'>atom.select</span>(<span class='kw'>pdb</span>, resno=<span class='fl'>201</span>, verbose=<span class='fl'>FALSE</span>)
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"3RE0"</span>, verbose=<span class='fl'>FALSE</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/3RE0.pdb  exists. Skipping download</span></div><div class='output co'>#&gt;    PDB has ALT records, taking A only, rm.alt=TRUE</div><div class='input'><span class='kw'>inds</span> <span class='op'>&lt;-</span> <span class='fu'>atom.select</span>(<span class='kw'>pdb</span>, resno=<span class='fl'>201</span>, verbose=<span class='fl'>FALSE</span>)
 
 <span class='co'>## selected atoms</span>
 <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>pdb</span><span class='op'>$</span><span class='kw'>atom</span><span class='op'>$</span><span class='kw'>elety</span>[<span class='kw'>inds</span><span class='op'>$</span><span class='kw'>atom</span>])</div><div class='output co'>#&gt; [1] "PT1" "N1"  "N2"  "CL2"</div><div class='input'>

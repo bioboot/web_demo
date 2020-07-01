@@ -110,12 +110,30 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../articles/bio3d_vignettes.html">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-book"></span>
      
     Tutorials
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">ADVANCED TUTORIALS</li>
+    <li>
+      <a href="../articles/b11.html">Title B1</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">WEBAPP TUTORIALS</li>
+    <li>
+      <a href="../articles/c11.html">Title C1</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../reference/index.html">
@@ -237,9 +255,9 @@
 <span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples/1hel.pdb"</span>, package=<span class='st'>"bio3d"</span>) )
 
 <span class='co'>## Perform NMA</span>
-<span class='kw'>modes.a</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>, ff=<span class='st'>"calpha"</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.021 seconds.
-#&gt;  Diagonalizing Hessian...	Done in 0.079 seconds.</div><div class='input'><span class='kw'>modes.b</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>, ff=<span class='st'>"anm"</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.021 seconds.
-#&gt;  Diagonalizing Hessian...	Done in 0.078 seconds.</div><div class='input'>
+<span class='kw'>modes.a</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>, ff=<span class='st'>"calpha"</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.013 seconds.
+#&gt;  Diagonalizing Hessian...	Done in 0.091 seconds.</div><div class='input'><span class='kw'>modes.b</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>, ff=<span class='st'>"anm"</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.011 seconds.
+#&gt;  Diagonalizing Hessian...	Done in 0.101 seconds.</div><div class='input'>
 <span class='co'>## Calculate and plot RMSIP</span>
 <span class='kw'>r</span> <span class='op'>&lt;-</span> <span class='fu'>rmsip</span>(<span class='kw'>modes.a</span>, <span class='kw'>modes.b</span>)
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='kw'>r</span>)</div><div class='img'><img src='plot.rmsip-1.png' alt='' width='700' height='433' /></div></pre>

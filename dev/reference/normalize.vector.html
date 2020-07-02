@@ -43,9 +43,9 @@
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
 
-<!--optional theme-->
+<!--optional theme
 <link href="../.css" rel="stylesheet">
-
+-->
 
 
 <!-- docsearch -->
@@ -72,15 +72,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-115082821-1');
-</script>
 
   </head>
 
@@ -119,6 +111,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/index.html">All Vignettes (that compile)</a>
+    </li>
     <li>
       <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
     </li>
@@ -243,8 +238,8 @@
 <span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples/1hel.pdb"</span>, package=<span class='st'>"bio3d"</span>) )
 
 <span class='co'>## Calculate (vibrational) normal modes</span>
-<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.053 seconds.
-#&gt;  Diagonalizing Hessian...	Done in 0.106 seconds.</div><div class='input'>
+<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.014 seconds.
+#&gt;  Diagonalizing Hessian...	Done in 0.077 seconds.</div><div class='input'>
 <span class='co'>## Returns a vector</span>
 <span class='kw'>nv</span> <span class='op'>&lt;-</span> <span class='fu'>normalize.vector</span>(<span class='kw'>modes</span><span class='op'>$</span><span class='kw'>modes</span>[,<span class='fl'>7</span>])
 
@@ -264,13 +259,12 @@
 
       <footer>
       <div class="tidyverse">
-  <p>Rough draft website demo based on [tidytemplate]()</p>
+  <p>Authored by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.</p>
 </div>
 
 <div class="author">
   <p>
-    Developed by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
+    Built with &#10084;&#65039; and <a href="https://pkgdown.r-lib.org">pkgdown</a> &copy; 2020.
   </p>
 </div>
 

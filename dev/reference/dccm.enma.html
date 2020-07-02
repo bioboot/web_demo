@@ -43,9 +43,9 @@
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
 
-<!--optional theme-->
+<!--optional theme
 <link href="../.css" rel="stylesheet">
-
+-->
 
 
 <!-- docsearch -->
@@ -73,15 +73,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-115082821-1');
-</script>
 
   </head>
 
@@ -120,6 +112,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/index.html">All Vignettes (that compile)</a>
+    </li>
     <li>
       <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
     </li>
@@ -275,26 +270,26 @@
 <span class='co'>## Plot correlations for first structure</span>
 <span class='fu'>plot.dccm</span>(<span class='kw'>cij</span><span class='op'>$</span><span class='kw'>all.dccm</span>[,,<span class='fl'>1</span>])
 
-}</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1a70.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1czp.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1frd.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1fxi.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1iue.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1pfd.pdb  exists. Skipping download</span></div><div class='output co'>#&gt;   |                                                                              |                                                                      |   0%  |                                                                              |============                                                          |  17%  |                                                                              |=======================                                               |  33%  |                                                                              |===================================                                   |  50%  |                                                                              |===============================================                       |  67%  |                                                                              |==========================================================            |  83%  |                                                                              |======================================================================| 100%
+}</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1a70.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1czp.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1frd.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1fxi.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1iue.pdb  exists. Skipping download</span></div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1pfd.pdb  exists. Skipping download</span></div><div class='output co'>#&gt;   |                                                                              |                                                                      |   0%  |                                                                              |============                                                          |  17%  |                                                                              |=======================                                               |  33%  |                                                                              |===================================                                   |  50%  |                                                                              |===============================================                       |  67%  |                                                                              |==========================================================            |  83%  |                                                                              |======================================================================| 100%
 #&gt; Reading PDB files:
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1a70_A.pdb
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1czp_A.pdb
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1frd_A.pdb
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1fxi_A.pdb
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1iue_A.pdb
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1pfd_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1a70_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1czp_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1frd_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1fxi_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1iue_A.pdb
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1pfd_A.pdb
 #&gt; .   PDB has ALT records, taking A only, rm.alt=TRUE
 #&gt; .....
 #&gt; 
 #&gt; Extracting sequences
 #&gt; 
-#&gt; pdb/seq: 1   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1a70_A.pdb 
-#&gt; pdb/seq: 2   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1czp_A.pdb 
+#&gt; pdb/seq: 1   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1a70_A.pdb 
+#&gt; pdb/seq: 2   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1czp_A.pdb 
 #&gt;    PDB has ALT records, taking A only, rm.alt=TRUE
-#&gt; pdb/seq: 3   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1frd_A.pdb 
-#&gt; pdb/seq: 4   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1fxi_A.pdb 
-#&gt; pdb/seq: 5   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1iue_A.pdb 
-#&gt; pdb/seq: 6   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/split_chain/1pfd_A.pdb 
+#&gt; pdb/seq: 3   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1frd_A.pdb 
+#&gt; pdb/seq: 4   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1fxi_A.pdb 
+#&gt; pdb/seq: 5   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1iue_A.pdb 
+#&gt; pdb/seq: 6   name: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/split_chain/1pfd_A.pdb 
 #&gt; 
 #&gt; Details of Scheduled Calculation:
 #&gt;   ... 6 input structures 
@@ -317,13 +312,12 @@
 
       <footer>
       <div class="tidyverse">
-  <p>Rough draft website demo based on [tidytemplate]()</p>
+  <p>Authored by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.</p>
 </div>
 
 <div class="author">
   <p>
-    Developed by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
+    Built with &#10084;&#65039; and <a href="https://pkgdown.r-lib.org">pkgdown</a> &copy; 2020.
   </p>
 </div>
 

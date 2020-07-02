@@ -43,9 +43,9 @@
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
 
-<!--optional theme-->
+<!--optional theme
 <link href="../.css" rel="stylesheet">
-
+-->
 
 
 <!-- docsearch -->
@@ -73,15 +73,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-115082821-1');
-</script>
 
   </head>
 
@@ -120,6 +112,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/index.html">All Vignettes (that compile)</a>
+    </li>
     <li>
       <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
     </li>
@@ -310,14 +305,14 @@ append = <span class='fl'>FALSE</span>, verbose = <span class='fl'>FALSE</span>,
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'># Read a PDB file</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/1bg2.pdb  exists. Skipping download</span></div><div class='input'>
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/1bg2.pdb  exists. Skipping download</span></div><div class='input'>
 <span class='co'># Write out in PQR format </span>
 <span class='kw'>outfile</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"eg.pqr"</span>)
 <span class='fu'>write.pqr</span>(pdb=<span class='kw'>pdb</span>, file = <span class='kw'>outfile</span>)
 
 <span class='fu'><a href='https://rdrr.io/r/base/invisible.html'>invisible</a></span>( <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"\nSee the output file:"</span>, <span class='kw'>outfile</span>, sep = <span class='st'>"\n"</span>) )</div><div class='output co'>#&gt; 
 #&gt; See the output file:
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpM6Aely/eg.pqr</div><div class='input'>
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/eg.pqr</div><div class='input'>
 <span class='co'># }</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -330,13 +325,12 @@ append = <span class='fl'>FALSE</span>, verbose = <span class='fl'>FALSE</span>,
 
       <footer>
       <div class="tidyverse">
-  <p>Rough draft website demo based on [tidytemplate]()</p>
+  <p>Authored by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.</p>
 </div>
 
 <div class="author">
   <p>
-    Developed by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
+    Built with &#10084;&#65039; and <a href="https://pkgdown.r-lib.org">pkgdown</a> &copy; 2020.
   </p>
 </div>
 

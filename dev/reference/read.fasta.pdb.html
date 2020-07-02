@@ -43,9 +43,9 @@
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
 
-<!--optional theme-->
+<!--optional theme
 <link href="../.css" rel="stylesheet">
-
+-->
 
 
 <!-- docsearch -->
@@ -73,15 +73,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-115082821-1');
-</script>
 
   </head>
 
@@ -120,6 +112,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">INTRODUCTORY TUTORIALS</li>
+    <li>
+      <a href="../articles/index.html">All Vignettes (that compile)</a>
+    </li>
     <li>
       <a href="../articles/bio3d_vignettes.html">Vignettes (old listing)</a>
     </li>
@@ -304,43 +299,13 @@
 #&gt;    PDB has ALT records, taking A only, rm.alt=TRUE
 #&gt; pdb/seq: 3   name: http://www.rcsb.org/pdb/files/1i5s.pdb 
 #&gt;    PDB has ALT records, taking A only, rm.alt=TRUE
-#&gt; pdb/seq: 4   name: http://www.rcsb.org/pdb/files/2ncd.pdb </div><div class='input'>
+#&gt; pdb/seq: 4   name: http://www.rcsb.org/pdb/files/2ncd.pdb </div><div class='output co'>#&gt; <span class='warning'>Warning: URL 'http://files.rcsb.org/view/2ncd.pdb': status was 'Timeout was reached'</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot remove file '/var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpyTUj9o/filec7291fb052cc.pdb', reason 'No such file or directory'</span></div><div class='output co'>#&gt; <span class='error'>Error in read.pdb(files[i], verbose = FALSE, ...): File not found at provided URL</span></div><div class='input'>
 <span class='co'># Structure/sequence names/ids</span>
-<span class='fu'><a href='https://rdrr.io/r/base/basename.html'>basename</a></span>( <span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>id</span> )</div><div class='output co'>#&gt; [1] "1bg2.pdb" "1i6i.pdb" "1i5s.pdb" "2ncd.pdb"</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/basename.html'>basename</a></span>( <span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>id</span> )</div><div class='output co'>#&gt; <span class='error'>Error in basename(pdbs$id): object 'pdbs' not found</span></div><div class='input'>
 <span class='co'># Alignment positions 335 to 339</span>
-<span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>ali</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt;                                        [,1] [,2] [,3] [,4] [,5]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb "L"  "L"  "F"  "G"  "Q" 
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb "L"  "R"  "Y"  "A"  "D" 
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb "L"  "R"  "Y"  "A"  "D" 
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb "L"  "R"  "F"  "A"  "A" </div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>resid</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt;                                        [,1]  [,2]  [,3]  [,4]  [,5] 
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb "LEU" "LEU" "PHE" "GLY" "GLN"
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb "LEU" "ARG" "TYR" "ALA" "ASP"
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb "LEU" "ARG" "TYR" "ALA" "ASP"
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb "LEU" "ARG" "PHE" "ALA" "ALA"</div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>resno</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt;                                        [,1] [,2] [,3] [,4] [,5]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb  316  317  318  319  320
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb  345  346  347  348  349
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb  345  346  347  348  349
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb  661  662  663  664  665</div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>b</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt;                                         [,1]  [,2]  [,3]  [,4]  [,5]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb 14.99 15.46  9.61 12.16 26.17
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb 19.27 22.65 23.66 20.76 26.02
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb 16.08 19.46 16.91 20.48 26.71
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb 14.01 22.77 31.48 44.88 54.12</div><div class='input'>
+<span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>ali</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'pdbs' not found</span></div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>resid</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'pdbs' not found</span></div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>resno</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'pdbs' not found</span></div><div class='input'><span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>b</span>[,<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>]</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'pdbs' not found</span></div><div class='input'>
 <span class='co'># Alignment C-alpha coordinates for these positions</span>
-<span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>xyz</span>[, <span class='fu'>atom2xyz</span>(<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>)]</div><div class='output co'>#&gt;                                          [,1]    [,2]   [,3]   [,4]    [,5]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb 18.880  -4.358 46.825 19.801  -7.246
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb  4.206  34.360  4.539  3.439  38.005
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb 16.417 -33.136  4.337 17.452 -36.750
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb  0.185  37.134 46.308 -0.375  34.180
-#&gt;                                          [,6]   [,7]    [,8]   [,9]  [,10]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb 44.546 21.449  -4.913 42.020 23.509
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb  5.403  1.775  37.124  8.670  4.660
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb  5.131 19.143 -35.570  8.292 15.967
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb 48.642 -2.386  36.408 50.962 -4.710
-#&gt;                                          [,11]  [,12]  [,13]   [,14]  [,15]
-#&gt; http://www.rcsb.org/pdb/files/1bg2.pdb  -3.354 44.785 24.545  -6.830 45.885
-#&gt; http://www.rcsb.org/pdb/files/1i6i.pdb  34.826  9.548  7.057  37.666  8.763
-#&gt; http://www.rcsb.org/pdb/files/1i5s.pdb -33.755  9.354 13.829 -36.723  8.388
-#&gt; http://www.rcsb.org/pdb/files/2ncd.pdb  36.941 48.048 -4.498  33.173 47.625</div><div class='input'>
+<span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>xyz</span>[, <span class='fu'>atom2xyz</span>(<span class='fl'>335</span><span class='op'>:</span><span class='fl'>339</span>)]</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'pdbs' not found</span></div><div class='input'>
 <span class='co'># See 'fit.xyz()' function for actual coordinate superposition</span>
 <span class='co'>#  e.g. fit to first structure</span>
 <span class='co'># xyz &lt;- fit.xyz(pdbs$xyz[1,], pdbs)</span>
@@ -358,13 +323,12 @@
 
       <footer>
       <div class="tidyverse">
-  <p>Rough draft website demo based on [tidytemplate]()</p>
+  <p>Authored by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.</p>
 </div>
 
 <div class="author">
   <p>
-    Developed by Barry Grant, Xin-Qiu Yao, Lars Skjaerven, Julien Ide.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
+    Built with &#10084;&#65039; and <a href="https://pkgdown.r-lib.org">pkgdown</a> &copy; 2020.
   </p>
 </div>
 

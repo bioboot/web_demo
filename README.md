@@ -1,6 +1,6 @@
 # Demo pkgdown website for bio3d v3.0
 
-Quick and dirty test of possible pkgdown based bio3d website
+Quick and dirty test of possible pkgdown based bio3d website. See: < https://bioboot.github.io/web_demo/ >
 
 ## Requirements
 Install the `pkgdown` and `tidytemplate` packages from CRAN.

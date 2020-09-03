@@ -61,6 +61,10 @@ This places the output in the articles dir of the main website docs/ dir:
 docs/articles/
 ```
 
+> **N.B.** Note that the vignettes themselves were pulled from `git@bitbucket.org:Grantlab/bio3d-vignettes.git` and placed into the main `vignettes/online` dir of the bio3d package root dir. They need to be in a sub-dir of `vignettes/` here so as to not be included in the built package for CRAN etc.
+
+**To Do:** setup a git sub-module for these vignettes...
+
 
 
 

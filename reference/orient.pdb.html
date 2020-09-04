@@ -116,6 +116,9 @@
       <a href="../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -139,10 +142,7 @@
       <a href="../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -265,7 +265,7 @@
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
 <span class='co'># PDB server connection required - testing excluded</span>
 
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>xyz</span> <span class='op'>&lt;-</span> <span class='fu'>orient.pdb</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt; Dimensions: 
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>xyz</span> <span class='op'>&lt;-</span> <span class='fu'>orient.pdb</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt; Dimensions: 
 #&gt;  x  min= -33.358    max= 37.308    range= 70.666 
 #&gt;  y  min= -23.392    max= 27.583    range= 50.975 
 #&gt;  z  min= -19.521    max= 28.128    range= 47.65 </div><div class='input'><span class='co'>#write.pdb(pdb, xyz = xyz, file = "mov1.pdb")</span>

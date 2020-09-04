@@ -116,6 +116,9 @@
       <a href="../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -139,10 +142,7 @@
       <a href="../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -397,7 +397,7 @@
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'>## Plot of B-factor values along with secondary structure from PDB</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>bfac</span> <span class='op'>&lt;-</span> <span class='kw'>pdb</span><span class='op'>$</span><span class='kw'>atom</span>[<span class='kw'>pdb</span><span class='op'>$</span><span class='kw'>calpha</span>,<span class='st'>"b"</span>]
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/1bg2.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>bfac</span> <span class='op'>&lt;-</span> <span class='kw'>pdb</span><span class='op'>$</span><span class='kw'>atom</span>[<span class='kw'>pdb</span><span class='op'>$</span><span class='kw'>calpha</span>,<span class='st'>"b"</span>]
 <span class='fu'>plot.bio3d</span>(<span class='kw'>bfac</span>, sse=<span class='kw'>pdb</span>, ylab=<span class='st'>"B-factor"</span>, col=<span class='st'>"gray"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/points.html'>points</a></span>(<span class='kw'>bfac</span>, typ=<span class='st'>"l"</span>)</div><div class='img'><img src='plot.bio3d-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span>
 
 <span class='co'>if</span> (<span class='fl'>FALSE</span>) {
@@ -421,7 +421,7 @@ col=<span class='st'>"blue"</span>, lwd=<span class='fl'>2</span>)
 <span class='co'>## Plot 'aligned' data respecting gap positions</span>
 <span class='fu'><a href='https://rdrr.io/r/base/attach.html'>attach</a></span>(<span class='kw'>transducin</span>)
 
-<span class='kw'>pdb</span> <span class='op'>=</span> <span class='fu'>read.pdb</span>(<span class='st'>"1tnd"</span>) <span class='co'>## Reference PDB see: pdbs$id[1]</span></div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/1tnd.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>pdb</span> <span class='op'>=</span> <span class='fu'>trim.pdb</span>(<span class='kw'>pdb</span>, inds=<span class='fu'>atom.select</span>(<span class='kw'>pdb</span>, chain=<span class='st'>"A"</span>))
+<span class='kw'>pdb</span> <span class='op'>=</span> <span class='fu'>read.pdb</span>(<span class='st'>"1tnd"</span>) <span class='co'>## Reference PDB see: pdbs$id[1]</span></div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/1tnd.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>pdb</span> <span class='op'>=</span> <span class='fu'>trim.pdb</span>(<span class='kw'>pdb</span>, inds=<span class='fu'>atom.select</span>(<span class='kw'>pdb</span>, chain=<span class='st'>"A"</span>))
 
 <span class='co'>## Plot of B-factor values with gaps</span>
 <span class='fu'>plot.bio3d</span>(<span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>b</span>, resno=<span class='kw'>pdb</span>, sse=<span class='kw'>pdb</span>, ylab=<span class='st'>"B-factor"</span>)</div><div class='img'><img src='plot.bio3d-2.png' alt='' width='700' height='433' /></div><div class='input'>

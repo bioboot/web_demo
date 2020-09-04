@@ -116,6 +116,9 @@
       <a href="../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -139,10 +142,7 @@
       <a href="../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -348,7 +348,7 @@
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'>## Plot loadings in relation to reference structure 1TAG</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"1tag"</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/1tag.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>ind</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"1TAG"</span>, <span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>id</span>)             <span class='co'>## location in alignment</span>
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>(<span class='st'>"1tag"</span>)</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/1tag.pdb  exists. Skipping download</span></div><div class='input'><span class='kw'>ind</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"1TAG"</span>, <span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>id</span>)             <span class='co'>## location in alignment</span>
 
 <span class='kw'>resno</span> <span class='op'>&lt;-</span> <span class='kw'>pdbs</span><span class='op'>$</span><span class='kw'>resno</span>[<span class='kw'>ind</span>, <span class='op'>!</span><span class='fu'>is.gap</span>(<span class='kw'>pdbs</span>)]  <span class='co'>## non-gap residues</span>
 <span class='kw'>tpdb</span> <span class='op'>&lt;-</span> <span class='fu'>trim.pdb</span>(<span class='kw'>pdb</span>, resno=<span class='kw'>resno</span>)

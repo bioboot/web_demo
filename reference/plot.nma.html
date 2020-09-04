@@ -115,6 +115,9 @@
       <a href="../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -138,10 +141,7 @@
       <a href="../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -283,8 +283,8 @@
 <span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"examples/1hel.pdb"</span>, package=<span class='st'>"bio3d"</span>) )
 
 <span class='co'>## Calculate modes</span>
-<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.011 seconds.
-#&gt;  Diagonalizing Hessian...	Done in 0.075 seconds.</div><div class='input'>
+<span class='kw'>modes</span> <span class='op'>&lt;-</span> <span class='fu'>nma</span>(<span class='kw'>pdb</span>)</div><div class='output co'>#&gt;  Building Hessian...		Done in 0.01 seconds.
+#&gt;  Diagonalizing Hessian...	Done in 0.08 seconds.</div><div class='input'>
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='kw'>modes</span>, sse=<span class='kw'>pdb</span>)</div><div class='img'><img src='plot.nma-1.png' alt='' width='700' height='433' /></div><div class='input'></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

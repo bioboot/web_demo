@@ -69,6 +69,9 @@
       <a href="../../../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../../../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -92,10 +95,7 @@
       <a href="../../../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../../../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../../../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -215,13 +215,13 @@
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="kw">modes.gtp</span> <span class="op">=</span> <span class="fu"><a href="../../../reference/nma.html">nma</a></span>(<span class="kw">pdb.gtp</span>)
 </pre></div>
-<pre><code>##  Building Hessian...     Done in 0.066 seconds.
-##  Diagonalizing Hessian...    Done in 1.107 seconds.</code></pre>
+<pre><code>##  Building Hessian...     Done in 0.063 seconds.
+##  Diagonalizing Hessian...    Done in 1.193 seconds.</code></pre>
 <div class="sourceCode" id="cb6"><pre class="downlit">
 <span class="kw">modes.gdi</span> <span class="op">=</span> <span class="fu"><a href="../../../reference/nma.html">nma</a></span>(<span class="kw">pdb.gdi</span>)
 </pre></div>
-<pre><code>##  Building Hessian...     Done in 0.095 seconds.
-##  Diagonalizing Hessian...    Done in 1.08 seconds.</code></pre>
+<pre><code>##  Building Hessian...     Done in 0.105 seconds.
+##  Diagonalizing Hessian...    Done in 1.147 seconds.</code></pre>
 <p>Residue cross-correlations can then be calculated based on these normal mode results.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit">
 <span class="kw">cij.gtp</span> <span class="op">=</span> <span class="fu"><a href="../../../reference/dccm.html">dccm</a></span>(<span class="kw">modes.gtp</span>)

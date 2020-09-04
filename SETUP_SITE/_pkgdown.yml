@@ -1,0 +1,432 @@
+title: Bio3D
+#url:                   # GitHub Pages
+
+template:
+  package: tidytemplate
+  path: "inst/pkgdown/templates" # Overide html templates
+  default_assets: true
+  
+  params:
+#    bootswatch: paper          # Not used anymore
+#    ganalytics: UA-000000-01                   # TO UPDATE no longer hard coded in head.html
+    docsearch:
+      api_key: 1270c4079b26a138795263974bbf302d # TO UPDATE
+      index_name: tidyverse                     # TO UPDATE
+
+development:
+  mode: release
+
+home:
+  strip_header: true
+  title: An R package for structural bioinformatics
+  description: >
+    Analyze protein structure, sequence and dynamics data in R.
+#  links:
+#  - text: Some sidebar text
+#    href: http://website.com
+  
+navbar:
+  left:
+    - icon: fa-book
+      text: "Tutorials"
+      menu:
+      - text: "INTRODUCTORY TUTORIALS"
+      - text: "Installing Bio3D"
+        href: articles/online/install_vignette/Bio3D_install.html
+      - text: "New user guide"
+        href: http://thegrantlab.org/bio3d_v2/user-guide
+      - text: "Getting started with Bio3D"
+        href: articles/online/intro_vignette/Bio3D_introduction.html
+      - text: "PDB structure manipulation and analysis"
+        href: articles/online/pdb_vignette/Bio3D_pdb.html
+      - text: "Comparative sequence and structure analysis"
+        href: articles/online/pca_vignette/Bio3D_pca.html
+      - text: "Enhanced Normal Modes Analysis"
+        href: articles/online/nma_vignette/Bio3D_nma.html
+      - text: "Beginning trajectory analysis with Bio3D "
+        href: articles/online/traj_vignette/Bio3D_md.html
+      - text: -------
+      - text: "ADVANCED TUTORIALS"
+      - text: "Ensemble NMA of E.coli DHFR structures"
+        href: articles/online/enma_vignettes/Bio3D_nma-dhfr-partI.html
+      - text: "Ensemble NMA across multiple species of DHFR"
+        href: articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html
+      - text: "Protein structure network analysis with Bio3D"
+        href: articles/online/cna_vignette/cna_vignette.spin.html
+      - text: "Ensemble Difference Distance Matrix (eDDM) analysis"
+        href: articles/online/eddm_vignette/Bio3D_eddm.spin.html  
+      - text: -------
+      - text: "WEBAPP TUTORIALS"
+      - text: "Online protein structure analysis with Bio3D-Web (PDF)"
+        href: http://thegrantlab.org/bio3d_v2/download/webapp-tutorials?download=22:bio3d-webapp-pca
+      - text: "Online Normal Mode Analysis with Bio3D WebApps (To Update)"
+        href: http://thegrantlab.org/bio3d_v2/webapps
+      - text: -------
+      - text: "All vignettes"
+        href: articles/index.html   
+
+
+
+    - icon: fa-file-code-o
+      text: "Documentation"
+      href: reference/index.html
+
+  right:
+    - icon: fa-comments-o
+      text: "FAQ"
+      href: FAQ.html
+
+    - icon: fa-newspaper-o
+      text: "News"
+      href: news/index.html
+
+    - icon: fa-external-link
+      text: "Grant Lab"
+      href: http://thegrantlab.org/
+
+    - icon: fa-bitbucket 
+      href: https://bitbucket.org/Grantlab/bio3d/src/master/
+
+
+
+news:
+  one_page: false
+
+# Organize function documentation 
+reference:
+- title: Input/Output
+  desc: >
+    Read and Write Common Biomolecular Data Types
+  contents:
+  - read.pdb
+  - read.fasta
+  - read.fasta.pdb
+  - read.ncdf
+  - read.dcd
+  - read.crd
+  - read.pqr
+  - read.mol2
+  - read.all
+  - read.pdcBD
+  - read.cif
+  - read.crd.amber
+  - read.crd.charmm
+  - read.prmtop
+  - aln2html
+  - get.pdb
+  - get.seq
+  - load.enmff
+  - write.pdb
+  - write.crd
+  - write.fasta
+  - write.ncdf
+  - write.pqr
+  - write.pir
+  - write.mol2
+  - mktrj.nma
+  - mktrj.pca
+  - mktrj.enma
+  - pymol
+  - vmd
+
+- title: Sequence Analysis
+  desc: >
+    Do Interesting Things with Protein Sequence
+  contents:
+  - consensus
+  - conserv
+  - blast.pdb
+  - hmmer
+  - pfam
+  - uniprot
+  - entropy
+  - filter.identity
+  - seqidentity
+  - motif.find
+  - pdbaln
+  - seq2aln
+  - seqaln
+  - seqaln.pair
+  - seqbind
+
+- title: Structure Analysis
+  desc: >
+    Do Interesting Things with Protein Structure
+  contents:
+  - angle.xyz
+  - biounit
+  - blast.pdb
+  - get.blast
+  - atom.select
+  - combine.select
+  - cmap
+  - filter.cmap
+  - core.find
+  - core.cmap
+  - com
+  - dccm
+  - filter.dccm
+  - dist.xyz
+  - dm
+  - dssp
+  - dssp.pdbs
+  - geostas
+  - mustang
+  - fit.xyz
+  - binding.site
+  - mktrj
+  - mktrj.pca
+  - overlap
+  - pca
+  - pca.xyz
+  - pca.pdbs
+  - pca.array
+  - pca.tor
+  - dccm.pca
+  - project.pca
+  - pdbaln
+  - pdb.annotate
+  - pdb2aln
+  - pdb2aln.ind
+  - pdb2sse
+  - pdbs2sse
+  - pdbfit
+  - chain.pdb
+  - convert.pdb
+  - rgyr
+  - rmsd
+  - filter.rmsd
+  - rmsf
+  - rmsip
+  - struct.aln
+  - torsion.pdb
+  - torsion.xyz
+  - wrap.tor
+  - aa2mass
+  - aa.table
+  - atom.index
+  - atom2mass
+  - atom2ele
+  - cov.nma
+  - dccm.enma
+  - dccm.nma
+  - dccm.xyz
+  - deformation.nma
+  - fluct.nma
+  - inner.prod
+  - load.enmff
+  - mktrj.nma
+  - nma
+  - nma.pdb
+  - nma.pdbs
+  - normalize.vector
+  - pdbs2pdb
+  - plot.enma
+  - plot.nma
+  - plot.rmsip
+  - sdENM
+  - sse.bridges
+  - view.dccm
+  - view.modes
+  - var.xyz
+  - inspect.connectivity
+
+- title: Trajectory Analysis
+  desc: >
+    Do Interesting Things with Simulation Data
+  contents:
+  - angle.xyz
+  - cmap
+  - filter.cmap
+  - core.find
+  - core.map
+  - dccm
+  - dccm.pca
+  - filter.dccm
+  - dist.xyz
+  - dm
+  - dssp.xyz
+  - geostas
+  - fit.xyz
+  - mktrj
+  - mktrj.pca
+  - overlap
+  - project.pca
+  - pca.tor
+  - pca.xyz
+  - pdbaln
+  - rgyr
+  - rmsd
+  - filter.rmsd
+  - rmsf
+  - rmsip
+  - torsion.pdb
+  - torsion.xyz
+  - wrap.tor
+
+- title: Normal Mode Analysis
+  desc: >
+    Probe Large-Scale Protein Motions
+  contents:
+  - aa2mass
+  - aa.table
+  - atom.index
+  - atom2mass
+  - atom2ele
+  - bhattacharyya
+  - cov.nma
+  - covsoverlap
+  - dccm.enma
+  - dccm.nma
+  - dccm.xyz
+  - deformation.nma
+  - geostas
+  - fluct.nma
+  - inner.prod
+  - load.enmff
+  - mktrj
+  - mktrj.nma
+  - mktrj.enma
+  - nma
+  - nma.pdb
+  - nma.pdbs
+  - aanma
+  - aanma.pdbs
+  - gnm
+  - dccm.gnm
+  - normalize.vector
+  - pdbs2pdb
+  - plot.enma
+  - plot.nma
+  - plot.rmsip
+  - sdENM
+  - sse.bridges
+  - sip
+  - var.xyz
+  - var.pdbs
+  - view.dccm
+  - view.modes
+
+
+- title: Correlation Network Analysis
+  desc: >
+    Network analysis of protein structure and dynamic coupling
+  contents:
+  - cna
+  - cnapath
+  - dccm
+  - filter.dccm
+  - cmap
+  - community.tree
+  - network.amendment
+  - view.cna
+  - view.dccm
+  - view.cnapath
+  - plot.cna
+  - print.cna
+  - identify.cna
+  - layout.cna
+  - prune.cna
+  - community.aln
+  
+- title: Graphics
+  desc: >
+    Plotting and Graphic Display
+  contents:
+  - bwr.colors
+  - vmd_colors
+  - mono.colors
+  - plot.bio3d
+  - plot.blast
+  - plot.cmap
+  - plot.core
+  - plot.dccm
+  - plot.dmat
+  - plot.fluct
+  - plot.geostas
+  - plot.pca
+  - plot.pca.loadings
+  - hclustplot
+  - plot.cna
+  - plot.fasta
+  - plot.hmmer
+  - plot.matrix.loadings
+
+- title: Utilities
+  desc: >
+    Convert and Manipulate Data
+  contents:
+  - aa.index
+  - aa123
+  - aa2index
+  - aln2html
+  - as.fasta
+  - as.pdb
+  - as.select
+  - as.xyz
+  - atom.select
+  - combine.select
+  - atom2xyz
+  - basename.pdb
+  - bio3d-package
+  - biounit
+  - bounds
+  - bounds.sse
+  - cat.pdb
+  - check.utility
+  - clean.pdb
+  - chain.pdb
+  - convert.pdb
+  - diag.ind
+  - difference.vector
+  - gap.inspect
+  - get.blast
+  - inspect.connectivity
+  - filter.identity
+  - is.gap
+  - is.pdb
+  - is.select
+  - is.xyz
+  - is.pdbs
+  - is.mol2
+  - lbio3d
+  - mask
+  - orient.pdb
+  - pairwise
+  - plot.bio3d
+  - print.core
+  - print.cna
+  - print.fasta
+  - print.xyz
+  - print.cnapath
+  - print.enma
+  - print.geostas
+  - print.mol2
+  - print.nma
+  - print.pca
+  - print.pdb
+  - print.prmtop
+  - print.rle2
+  - print.select
+  - print.sse
+  - rle2
+  - filter.rmsd
+  - pdbseq
+  - seqbind
+  - pdbsplit
+  - store.atom
+  - trim
+  - trim.mol2
+  - trim.pdbs
+  - trim.xyz
+  - unbound
+  - vec2resno
+  - setup.ncore
+  - elements
+  - formula2mass
+
+- title: Example Data
+  desc: >
+    Bio3d Example Data
+  contents:
+  - example.data

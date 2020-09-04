@@ -116,6 +116,9 @@
       <a href="../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -139,10 +142,7 @@
       <a href="../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -336,14 +336,14 @@ append = <span class='fl'>FALSE</span>, verbose = <span class='fl'>FALSE</span>,
 <span class='co'># PDB server connection required - testing excluded</span>
 
 <span class='co'># Read a PDB file</span>
-<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/1bg2.pdb  exists. Skipping download</span></div><div class='input'>
+<span class='kw'>pdb</span> <span class='op'>&lt;-</span> <span class='fu'>read.pdb</span>( <span class='st'>"1bg2"</span> )</div><div class='output co'>#&gt;   Note: Accessing on-line PDB file</div><div class='output co'>#&gt; <span class='warning'>Warning: /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/1bg2.pdb  exists. Skipping download</span></div><div class='input'>
 <span class='co'># Write out in PQR format </span>
 <span class='kw'>outfile</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"eg.pqr"</span>)
 <span class='fu'>write.pqr</span>(pdb=<span class='kw'>pdb</span>, file = <span class='kw'>outfile</span>)
 
 <span class='fu'><a href='https://rdrr.io/r/base/invisible.html'>invisible</a></span>( <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"\nSee the output file:"</span>, <span class='kw'>outfile</span>, sep = <span class='st'>"\n"</span>) )</div><div class='output co'>#&gt; 
 #&gt; See the output file:
-#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpP65a2t/eg.pqr</div><div class='input'>
+#&gt; /var/folders/xf/qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp4WslmZ/eg.pqr</div><div class='input'>
 <span class='co'># }</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

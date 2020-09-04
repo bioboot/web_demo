@@ -69,6 +69,9 @@
       <a href="../../../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../../../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -92,10 +95,7 @@
       <a href="../../../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../../../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../../../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -559,12 +559,12 @@ Residue temperature factors for PDB ID <code>4q21</code> with secondary structur
 <span class="kw">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4q21"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4q21.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4q21.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb50"><pre class="downlit">
 <span class="kw">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4lhy"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4lhy.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4lhy.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb52"><pre class="downlit">
 <span class="kw">a1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/trim.html">trim.pdb</a></span>(<span class="kw">a</span>, chain=<span class="st">"A"</span>)
 
@@ -643,12 +643,12 @@ Residue temperature factors for PDB ID <code>4q21</code> with secondary structur
 <span class="kw">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4q21"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4q21.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4q21.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb60"><pre class="downlit">
 <span class="kw">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4lhy"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4lhy.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4lhy.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb62"><pre class="downlit">
 <span class="co"># perform iterative alignment</span>
 <span class="kw">aln</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/struct.aln.html">struct.aln</a></span>(<span class="kw">a</span>, <span class="kw">b</span>)
@@ -689,7 +689,7 @@ Residue temperature factors for PDB ID <code>4q21</code> with secondary structur
 <span class="kw">pdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4q21"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4q21.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4q21.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb66"><pre class="downlit">
 <span class="kw">bs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/binding.site.html">binding.site</a></span>(<span class="kw">pdb</span>)
 </pre></div>
@@ -709,7 +709,7 @@ Residue temperature factors for PDB ID <code>4q21</code> with secondary structur
 <span class="kw">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/read.pdb.html">read.pdb</a></span>(<span class="st">"4lhy"</span>)
 </pre></div>
 <pre><code>## Warning in get.pdb(file, path = tempdir(), verbose = FALSE): /var/folders/xf/
-## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//RtmpD2WTEt/4lhy.pdb exists. Skipping download</code></pre>
+## qznxnpf91vb1wm4xwgnbt0xr0000gn/T//Rtmp6Xsoc0/4lhy.pdb exists. Skipping download</code></pre>
 <div class="sourceCode" id="cb71"><pre class="downlit">
 <span class="co"># atom selection</span>
 <span class="kw">a.inds</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../../reference/atom.select.html">atom.select</a></span>(<span class="kw">b</span>, chain=<span class="st">"A"</span>)

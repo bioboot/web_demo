@@ -69,6 +69,9 @@
       <a href="../../../articles/online/install_vignette/Bio3D_install.html">Installing Bio3D</a>
     </li>
     <li>
+      <a href="http://thegrantlab.org/bio3d_v2/user-guide">New user guide</a>
+    </li>
+    <li>
       <a href="../../../articles/online/intro_vignette/Bio3D_introduction.html">Getting started with Bio3D</a>
     </li>
     <li>
@@ -92,10 +95,7 @@
       <a href="../../../articles/online/enma_vignettes/Bio3D_nma-dhfr-partII.html">Ensemble NMA across multiple species of DHFR</a>
     </li>
     <li>
-      <a href="../../../articles/online/cna_vignette/Bio3D_cna-transducin.html">Correlation network analysis with Bio3D</a>
-    </li>
-    <li>
-      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D ***</a>
+      <a href="../../../articles/online/cna_vignette/cna_vignette.spin.html">Protein structure network analysis with Bio3D</a>
     </li>
     <li>
       <a href="../../../articles/online/eddm_vignette/Bio3D_eddm.spin.html">Ensemble Difference Distance Matrix (eDDM) analysis</a>
@@ -182,14 +182,15 @@
 <h1 class="hasAnchor">
 <a href="#background" class="anchor"></a>Background</h1>
 <p>Bio3D<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> is a family of R packages that provide interactive tools for structural bioinformatics. The primary focus of Bio3D is the analysis of bimolecular structure, sequence and simulation data.</p>
-<p>The Bio3D package, <strong>bio3d.cna</strong>, contains functionality for the creation and analysis of protein structure networks. This vignette will introduce this functionality by building and analyzing networks obtained from atomic correlation data (named <em>correlation network analysis</em>) derived from normal mode analysis (NMA) and molecular dynamics (MD) simulation (<strong>Figure 1</strong>)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Note that Bio3D contains extensive functionality for both NMA and MD analysis. An introduction to each of these areas is detailed in separate NMA and MD vignettes available from <a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d__" class="uri">https://urldefense.com/v3/__http://thegrantlab.org/bio3d__</a>;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryybFTS4$ .</p>
+<p>The Bio3D package, <strong>bio3d.cna</strong>, contains functionality for the creation and analysis of protein structure networks. This vignette will introduce this functionality by building and analyzing networks obtained from atomic correlation data (named <em>correlation network analysis</em>) derived from normal mode analysis (NMA) and molecular dynamics (MD) simulation (<strong>Figure 1</strong>)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Note that Bio3D contains extensive functionality for both NMA and MD analysis. An introduction to each of these areas is detailed in separate NMA and MD tutorals/vignettes available from <a href="http://thegrantlab.org/bio3d" class="uri">http://thegrantlab.org/bio3d</a>.</p>
+<p><br></p>
 <div class="figure">
 <img src="figures/cna_fig1.png" alt=""><p class="caption"><strong>Overview of a typical Bio3D network analysis protocol with key functions detailed in blue</strong>. Normal mode and/or molecular dynamics input first undergoes <strong>correlation analysis</strong> (with the function <strong>dccm()</strong>). The output from these functions is typically a matrix of residue-by-residue cross-correlations. <strong>Correlation network analysis</strong> can then be performed (with the <strong>cna()</strong> function) to generate a correlation network with residues as nodes that are linked by weighted edges that are proportional to their degree of correlated motion. The <strong>cna()</strong> function also performs a <strong>community clustering analysis</strong> to identify <em>communities</em> of highly correlated residues. The full residue network and coarse-grained community network can be visualized and analyzed further. With the object returned by cna(), a <strong>suboptimal path analysis</strong> can be performed via the <strong>cnapath()</strong> function. This analysis delineates “communication” paths between distal sites and identifies potential key residues underlying them. Collectively, correlation network analysis can provide valuable insight not readily available from the measures of correlation alone.</p>
 </div>
 <div id="requirements" class="section level4 unnumbered">
 <h4 class="hasAnchor">
 <a href="#requirements" class="anchor"></a>Requirements:</h4>
-<p>Detailed instructions for obtaining and installing the Bio3D packages on various platforms can be found in the <a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryybFTS4%24"><strong>Installing Bio3D Vignette</strong></a> available on-line. Note that this vignette also makes use of the <a href="https://urldefense.com/v3/__http://igraph.org/__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzrxeztBgE%24">IGRAPH</a> R package, which can be installed with the command:</p>
+<p>Detailed instructions for obtaining and installing the Bio3D packages on various platforms can be found in the <a href="http://thegrantlab.org/"><strong>Installing Bio3D Vignette</strong></a> available on-line. Note that this vignette also makes use of the <a href="http://igraph.org/">IGRAPH</a> R package, which can be installed with the command:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"igraph"</span>)
 </pre></div>
@@ -330,7 +331,7 @@ Example dynamical cross-correlation matrix (DCCM) plot with community annotation
 <span class="fu"><a href="https://rdrr.io/pkg/igraph/man/V.html">V</a></span>(<span class="kw">net</span><span class="op">$</span><span class="kw">community.network</span>)<span class="op">$</span><span class="kw">name</span>
 </pre></div>
 <pre><code>## [1] "1" "2" "3" "4" "5" "6" "7" "8"</code></pre>
-<p>In addition to various Bio3D functions, the full set of extensive <a href="https://urldefense.com/v3/__http://igraph.sourceforge.net__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8Fzzr79BqmbY%24">igraph package</a> features can thus be used to further analyze these network objects.</p>
+<p>In addition to various Bio3D functions, the full set of extensive <a href="http://igraph.sourceforge.net">igraph package</a> features can thus be used to further analyze these network objects.</p>
 </div>
 <div id="the-community-clustering-procedure" class="section level2">
 <h2 class="hasAnchor">
@@ -415,7 +416,7 @@ Example of forcing a k=3 community network
 <div id="network-generation-from-molecular-dynamics-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#network-generation-from-molecular-dynamics-data" class="anchor"></a>Network generation from molecular dynamics data</h2>
-<p>For this example section we apply correlation network analysis to a short molecular dynamics trajectory of Human Immunodeficiency Virus aspartic protease (HIVpr). This trajectory is included with the bio3d package and stored in CHARMM/NAMD DCD format. To reduce file size and speed up example execution, non C-alpha atoms have been previously removed (see the <a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryybFTS4%24">Trajectory Analysis vignette</a> for full details).</p>
+<p>For this example section we apply correlation network analysis to a short molecular dynamics trajectory of Human Immunodeficiency Virus aspartic protease (HIVpr). This trajectory is included with the bio3d package and stored in CHARMM/NAMD DCD format. To reduce file size and speed up example execution, non C-alpha atoms have been previously removed (see the <a href="http://thegrantlab.org/">Trajectory Analysis vignette</a> for full details).</p>
 <p>The code snippet below first sets the file paths for the example HIVpr starting structure (pdbfile) and trajectory data (dcdfile), then reads these files (producing the objects dcd and pdb).</p>
 <div class="sourceCode" id="cb39"><pre class="downlit">
 <span class="kw">dcdfile</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"examples/hivp.dcd"</span>, package = <span class="st">"bio3d"</span>)
@@ -536,7 +537,7 @@ Contact map filtered DCCM plot (compare to Figure 4).
 <div id="customized-network-visualization" class="section level1">
 <h1 class="hasAnchor">
 <a href="#customized-network-visualization" class="anchor"></a>Customized network visualization</h1>
-<p>We have already introduced the plot.cna() and vmd.cna() functions in earlier sections. Here we focus on methods for customizing network layouts, colors, labels, nodes and edges for visualization.</p>
+<p>We have already introduced the <code><a href="../../../reference/plot.cna.html">plot.cna()</a></code> and <code><a href="../../../reference/vmd.html">vmd.cna()</a></code> functions in earlier sections. Here we focus on methods for customizing network layouts, colors, labels, nodes and edges for visualization.</p>
 <div id="finding-layouts-for-network-visualization" class="section level2">
 <h2 class="hasAnchor">
 <a href="#finding-layouts-for-network-visualization" class="anchor"></a>Finding layouts for network visualization</h2>
@@ -726,7 +727,7 @@ Betweenness centrality.
 <div id="calculating-multiple-correlation-matrices" class="section level2">
 <h2 class="hasAnchor">
 <a href="#calculating-multiple-correlation-matrices" class="anchor"></a>Calculating multiple correlation matrices</h2>
-<p>In the following example we will use the dataset named ‘transducin’ available from the <strong>bio3d</strong> package, which contains 53 pre-assembled crystallographic structures of G<span class="math inline">\(\alpha\)</span>i categorized into <em>active GTP-analog-bound</em>, <em>inactive GDP-bound</em>, and <em>inhibitory GDI-bound</em> states. The dataset includes aligned PDB coordinates (<code>pdbs</code>), structural invariant core positions (<code>core</code>), and annotations for each PDB structure (<code>annotation</code>). Further details of the dataset can be obtained via <code><a href="../../../reference/example.data.html">help(transducin)</a></code> along with the <strong>Comparative Protein Structure Analysis with Bio3D</strong> vignette available <a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryybFTS4%24">online</a>.</p>
+<p>In the following example we will use the dataset named ‘transducin’ available from the <strong>bio3d</strong> package, which contains 53 pre-assembled crystallographic structures of G<span class="math inline">\(\alpha\)</span>i categorized into <em>active GTP-analog-bound</em>, <em>inactive GDP-bound</em>, and <em>inhibitory GDI-bound</em> states. The dataset includes aligned PDB coordinates (<code>pdbs</code>), structural invariant core positions (<code>core</code>), and annotations for each PDB structure (<code>annotation</code>). Further details of the dataset can be obtained via <code><a href="../../../reference/example.data.html">help(transducin)</a></code> along with the <strong>Comparative Protein Structure Analysis with Bio3D</strong> vignette available <a href="http://thegrantlab.org/bio3d">online</a>.</p>
 <div class="sourceCode" id="cb73"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/attach.html">attach</a></span>(<span class="kw">transducin</span>)
 </pre></div>
@@ -848,7 +849,7 @@ Betweenness centrality.
 <div id="about-this-document" class="section level1 unnumbered">
 <h1 class="hasAnchor">
 <a href="#about-this-document" class="anchor"></a>About this document</h1>
-<p>This document is available from the <a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d__;!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryybFTS4%24">Bio3D website</a> in R, HTML, and PDF formats. All code can be extracted and automatically executed to generate Figures and/or the PDF with the following commands:</p>
+<p>This document is available from the <a href="http://thegrantlab.org/bio3d">Bio3D website</a> in R, HTML, and PDF formats. All code can be extracted and automatically executed to generate Figures and/or the PDF with the following commands:</p>
 <div class="sourceCode" id="cb86"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/rstudio/rmarkdown">rmarkdown</a></span>)
 <span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="st">"cna_vignette.R"</span>)
@@ -887,7 +888,7 @@ Betweenness centrality.
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn1"><p>The latest version of the package, full documentation and further vignettes (including detailed installation instructions) can be obtained from the main Bio3D website: [<a href="https://urldefense.com/v3/__http://thegrantlab.org/bio3d/" class="uri">https://urldefense.com/v3/__http://thegrantlab.org/bio3d/</a>*(<a href="http:/*thegrantlab.org/bio3d/)__;XS8" class="uri">http:/*thegrantlab.org/bio3d/)__;XS8</a>!!Mih3wA!Vq7PIukjkapVBl7l5rylIUTj54SLL0NA4UaAh9K-Nw7WDKBxkEq8FzzryrmwSdg$<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>The latest version of the package, full documentation and further vignettes (including detailed installation instructions) can be obtained from the main Bio3D website: [<a href="http://thegrantlab.org/bio3d/(http:/thegrantlab.org/bio3d/" class="uri">http://thegrantlab.org/bio3d/(http:/thegrantlab.org/bio3d/</a>)<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>This document contains executable code that generates all figures contained within this document. See help(vignette) within R for full details.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
